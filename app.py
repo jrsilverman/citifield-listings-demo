@@ -4,6 +4,7 @@ import json
 import plotly.express as px
 import gzip
 
+@st.cache_data 
 def load_data(file_path):
     with gzip.open(file_path, 'rt', encoding='utf-8') as file:
         data = json.load(file)
